@@ -21,7 +21,7 @@ export default function Profile() {
       handleFileUpload(file)
     }
   }, [file])
-
+  // code to upload file
   const handleFileUpload = (file) => {
     const storage = getStorage(app)
     const fileName = new Date().getTime() + file.name
@@ -47,7 +47,7 @@ export default function Profile() {
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl font-sans-semibold text-center my-7'>Profile</h1>
+      <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form className='flex flex-col gap-4'>
         <input
           type='file'
@@ -70,7 +70,7 @@ export default function Profile() {
           ) : filePerc > 0 && filePerc < 100 ? (
             <span className='text-slate-700'>{`Uploading ${filePerc}%`}</span>
           ) : filePerc === 100 ? (
-            <span className='text-green-700'>Image Successfully uploaded</span>
+            <span className='text-green-700'>Image Successfully uploaded!</span>
           ) : (
             ''
           )}
@@ -98,7 +98,7 @@ export default function Profile() {
         </button>
       </form>
       <div className='flex justify-between mt-5'>
-        <span className='text-red-700 cursor-pointer'>Delete</span>
+        <span className='text-red-700 cursor-pointer'>Delete Account</span>
         <span className='text-red-700 cursor-pointer'>Sign out</span>
       </div>
     </div>
