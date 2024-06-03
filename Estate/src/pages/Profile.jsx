@@ -93,7 +93,7 @@ export default function Profile() {
       })
       const data = await res.json()
       if (data.success === false) {
-        dispatch(deleteUserFailure(data.message))
+        dispatch(deleteUserFailure(error.message))
         return
       }
       dispatch(deleteUserSuccess(data))
